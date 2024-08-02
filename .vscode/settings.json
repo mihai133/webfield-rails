@@ -1,0 +1,8 @@
+{
+    "ruby.rubocop.configFilePath": ".rubocop.yml",
+    "ruby.rubocop.executePath": "/opt/homebrew/lib/ruby/gems/3.3.0/bin/",
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "ruby": "html"
+    }
+}

@@ -1,8 +1,10 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
+<div class=" w-full flex">
+  <div class="">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
+
+    <h1 class="font-bold text-4xl mb-3 mt-5">@project.name</h1>
 
     <%= render @project %>
 
@@ -11,5 +13,21 @@
     <div class="inline-block ml-2">
       <%= button_to "Destroy this project", @project, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
-  </div>
+    
+    <h1 class="font-bold text-4xl mb-3 mt-5">Tasks for this project</h1>
+    <%= render_table do %>
+      <%= table_head do %>
+        <%= table_header "Name" %>
+        <%= table_header "Description" %>
+        <%= table_header "Belongs to" %>
+        <%= table_header "Actions" %>
+      <% end %>
+      <%= table_body do %>
+        <% @tasks.each do |task| %>
+          <%= render partial: 'project_table_row', locals: { project: task } %>
+         <% end %>
+      <% end %>
+    <% end %>
+    </div>
+    
 </div>

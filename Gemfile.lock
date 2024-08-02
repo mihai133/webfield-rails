@@ -130,6 +130,7 @@ GEM
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    lru_redux (1.1.0)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
@@ -249,6 +250,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    shadcn-ui (0.0.15)
+      tailwind_merge (~> 0.12)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -260,6 +263,8 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
+    tailwind_merge (0.12.0)
+      lru_redux (~> 1.1)
     tailwindcss-rails (2.6.5)
       railties (>= 7.0.0)
     tailwindcss-rails (2.6.5-aarch64-linux)
@@ -319,6 +324,7 @@ DEPENDENCIES
   rubocop (= 1.63.1)
   rubocop-ast (= 1.31.1)
   selenium-webdriver
+  shadcn-ui (~> 0.0.15)
   sprockets-rails
   stimulus-rails
   tailwindcss-rails

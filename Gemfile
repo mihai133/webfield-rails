@@ -73,3 +73,4 @@ gem "devise", "~> 4.9"
 
   gem 'rubocop', '1.63.1'
   gem 'rubocop-ast', '1.31.1'
+gem "shadcn-ui", "~> 0.0.15"

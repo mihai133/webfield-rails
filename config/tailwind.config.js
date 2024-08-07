@@ -1,3 +1,4 @@
+// tailwind.config.js
 const defaultTheme = require("tailwindcss/defaultTheme");
 const shadcnConfig = require("./shadcn.tailwind.js");
 

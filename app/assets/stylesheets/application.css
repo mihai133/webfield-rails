@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ /* application.css or similar */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional custom styles if necessary */

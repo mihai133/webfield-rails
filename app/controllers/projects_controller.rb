@@ -1,6 +1,6 @@
 class ProjectsController < UserController
   before_action :set_project, only: %i[ show edit update destroy ]
-
+  before_action :set_tasks, only: %i[ show edit update destroy ]
   # GET /projects or /projects.json
   def index
     @projects = current_user.projects.all
@@ -61,6 +61,10 @@ class ProjectsController < UserController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def set_tasks 
+      @tasks = @project.tasks.all
     end
 
     # Only allow a list of trusted parameters through.

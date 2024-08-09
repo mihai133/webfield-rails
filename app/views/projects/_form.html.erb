@@ -24,6 +24,18 @@
 
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+   <%= render_button("cancel",
+                     text: nil,
+                     variant: :outline,
+                     as: :link,
+                     href: @project) %>
+
+  <%= render_button("Submit",
+                    text: nil,
+                    variant: :default,
+                    as: :button,
+                    href: @project,
+                    method: :submit) %>
+
   </div>
 <% end %>

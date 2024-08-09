@@ -27,9 +27,9 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :project_id %>
-    <%= form.text_field :project_id, value: @project.id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+    <%= form.hidden_field :project_id, value: @project.id %>
+</div>
+
   
   <div class="inline">
     <%= render_button("Cancel", text: nil,
